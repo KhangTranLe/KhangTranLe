@@ -1,0 +1,69 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Font chính cho văn bản */
+    background: linear-gradient(135deg, #ff6f6f, #ff9999); /* Gradient màu đỏ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+    font-family: 'Montserrat', sans-serif; /* Font cho tiêu đề và các thành phần chính */
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #d32f2f; /* Màu đỏ đậm cho tiêu đề */
+    text-align: center;
+    font-weight: 600; /* Font-weight cho tiêu đề */
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555; /* Màu xám cho nhãn */
+    font-weight: 500; /* Font-weight cho nhãn */
+}
+input {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+input:focus {
+    border-color: #d32f2f; /* Màu đỏ đậm khi trường nhập được chọn */
+    box-shadow: 0 0 8px rgba(211, 47, 47, 0.3); /* Màu đỏ nhẹ cho bóng đổ */
+    outline: none;
+}
+input::placeholder {
+    color: #888; /* Màu xám nhạt cho placeholder */
+}
+button {
+    padding: 12px;
+    background-color: #d32f2f; /* Màu đỏ đậm cho nút */
+    color: #fff; /* Màu trắng cho chữ nút */
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif; /* Font cho nút bấm */
+    font-weight: 600; /* Font-weight cho chữ nút */
+    transition: background-color 0.3s, transform 0.2s;
+}
+button:hover {
+    background-color: #b71c1c; /* Màu đỏ đậm hơn khi hover */
+}
+button:active {
+    transform: scale(0.98);
+}

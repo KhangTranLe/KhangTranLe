@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateForm(event) {
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+            if (!fullname) {
+                alert("Vui lòng điền họ và tên của bạn.");
+                event.preventDefault(); // Ngăn không cho gửi biểu mẫu
+                return false;
+            }
+            if (!email) {
+                alert("Vui lòng điền email của bạn.");
+                event.preventDefault(); // Ngăn không cho gửi biểu mẫu
+                return false;
+            }
+            if (!password) {
+                alert("Vui lòng điền mật khẩu.  ");
+                event.preventDefault(); // Ngăn không cho gửi biểu mẫu
+                return false;
+            }
+            if (password !== confirmPassword) {
+                alert("Mật khẩu và xác nhận mật khẩu không khớp.");
+                event.preventDefault(); // Ngăn không cho gửi biểu mẫu
+                return false;
+            }
+            return true; // Cho phép gửi biểu mẫu nếu tất cả kiểm tra thành công
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Đăng Ký</h1>
+        <form onsubmit="return validateForm(event)">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" placeholder="Nhập họ và tên">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Nhập email">
+            <label for="phone">Số điện thoại (Không bắt buộc):</label>
+            <input type="tel" id="phone" placeholder="Nhập số điện thoại">
+            <label for="password">Mật khẩu:</label>
+            <input type="password" id="password" placeholder="Nhập mật khẩu">
+            <label for="confirm-password">Xác nhận mật khẩu:</label>
+            <input type="password" id="confirm-password" placeholder="Xác nhận mật khẩu">
+            <button type="submit">Đăng Ký</button>
+        </form>
+    </div>
+</body>
+</html>
